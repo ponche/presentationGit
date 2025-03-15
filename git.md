@@ -1,10 +1,10 @@
 ## Pourquoi Utiliser Plusieurs Branches dans Git ?
 
-- **Travail Simultané** <!-- .element: class="fragment" -->
-- **Isolation des Modifications** <!-- .element: class="fragment" -->
-- **Expérimentation Sûre** <!-- .element: class="fragment" -->
-- **Gestion des Conflits** <!-- .element: class="fragment" -->
-- **Stabilité du Code** <!-- .element: class="fragment" -->
+**Travail Simultané** <!-- .element: class="fragment" -->
+**Isolation des Modifications** <!-- .element: class="fragment" -->
+**Expérimentation Sûre** <!-- .element: class="fragment" -->
+**Gestion des Conflits** <!-- .element: class="fragment" -->
+**Stabilité du Code** <!-- .element: class="fragment" -->
 
 <div class="notes">
 - **Travail Simultané** : Permet aux développeurs de travailler sur diverses fonctionnalités sans interférer avec le travail des autres.
