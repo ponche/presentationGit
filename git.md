@@ -1,3 +1,20 @@
+## Introduction
+
+Pour un travail d'équipe efficace, l'adoption de procédures et de conventions Git est essentielle :
+
+- **Éviter les Malentendus** <!-- .element: class="fragment" -->
+- **Historique Clair** <!-- .element: class="fragment" -->
+- **Qualité et Maintenance du Code** <!-- .element: class="fragment" -->
+- **Réduction des Conflits** <!-- .element: class="fragment" -->
+
+Note: 
+- Les conventions Git facilitent la communication et la compréhension entre les membres de l'équipe, réduisant ainsi les risques de confusion.
+- Des messages de commit bien rédigés et des branches bien nommées permettent de maintenir un historique de projet compréhensible.
+- Les procédures (comme les PR et les revues de code que nous aborderont plus tard) assurent que le code intégré est de haute qualité, facilitant ainsi la maintenance.
+- En isolant les modifications dans des branches distinctes, les conflits de fusion sont minimisés, ce qui améliore l'efficacité du développement.
+
+---
+
 ## Pourquoi Utiliser Plusieurs Branches dans Git ?
 
 - **Travail Simultané** <!-- .element: class="fragment" -->
@@ -14,7 +31,7 @@ Note:
 - **Stabilité du Code** : Permet de maintenir une branche stable (comme `main`) pour la production, tandis que les développements en cours se font sur d'autres branches.
 
 
----
+--
 
 ## Structure des Branches
 
@@ -33,43 +50,32 @@ Note:
 - **bugfix/\<Correctif\>** : Branche pour les corrections mineures.
 - **ci/\<pipelineDevelop\>** : Branche pour les travaux liés aux pipelines CI/CD.
 
----
+--
 
-## Procédures et Conventions
 
-- **Nommer les Branches** <!-- .element: class="fragment" -->
+## Conventions de Commit
 
-  | Catégorie | Description | 
-  |-----------|-------------|
-  | hotfix | Résolution rapide des problèmes critiques. |
-  | bugfix | Correction de bugs. |
-  | feature | Ajout de fonctionnalités. |
-  | wip | Travail en cours. |
-  | draft | Branches de brouillon. |
-  | ci | Ajout de Pipeline CI/CD. |
-  | docs | Rédaction de documentation. |
+### Rédiger les Commits en Anglais
 
+- **Langue Uniforme** 
+- **Conventions de Commit** : Suivre les [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 
 Note:
-- **Nommer les Branches** : Suivre une convention de nommage claire pour les branches (ex. : `feature/<nom-fonctionnalité>`).
-- **hotfix** : Pour résoudre rapidement les problèmes critiques en production généralement avec une solution temporaire.
-- **bugfix** : Pour corriger un bug.
-- **feature** : Pour ajouter une fonctionnalité liée au projet.
-- **wip** : Pour un travail en cours, indicateur pour dire bloquer.
-- **draft** : Branches de brouillon, utilisées pour tester des choses.
-- **ci** : Pour ajouter des Pipeline CI/CD.
-- **docs** : Quand on rédige de la documentation, exemple : Docusaurus.
+- Tous les messages de commit doivent être rédigés en anglais pour éviter le franglais et assurer une compréhension uniforme au sein de l'équipe.
+- convention pour structurer les messages de commit de manière cohérente et informative.
 
+--
 
----
+### Exemple de Conventional Commit
 
-## Mise à Jour des Branches
+ - **Format** : `<type>(<scope>):<subject>`
+ - **type** : Indique le type de changement (ex. : `feat`, `fix`, `docs`).
+ - **scope** : Spécifie la partie du code affectée (optionnel).
+ - **subject** : Décrit succinctement la modification.
 
-- **Après une Pull Request (PR)** <!-- .element: class="fragment" -->
-  - `git pull origin develop` <!-- .element: class="fragment" -->
-  - Résoudre les conflits <!-- .element: class="fragment" -->
+-- 
 
-Note:
-- **Après une Pull Request (PR)** : Mettez à jour votre branche locale par rapport à `develop` en utilisant `git pull origin develop`. Résolvez les éventuels conflits avant de fusionner.
+  - **exemple** : test(login): add unit tests for login functionality
+
 
 
 ---
@@ -100,11 +106,21 @@ Note:
   - Demander une revue de code <!-- .element: class="fragment" -->
 
 
-
-
 Note:
 - **Création via GitHub** : Allez sur l'interface GitHub et cliquez sur "New Pull Request". Sélectionnez la branche source et la branche cible.
 - **Description et Revue de Code** : Rédigez une description détaillée des modifications apportées. Demandez une revue de code à vos collègues pour valider les changements.
+
+--
+
+## Mise à Jour des Branches
+
+
+  - `git pull origin develop` <!-- .element: class="fragment" -->
+  - **Résoudre les conflits** <!-- .element: class="fragment" -->
+  - **Après une Pull Request (PR) : on tire une nouvelle branche depuis la develop**<!-- .element: class="fragment" -->
+
+Note:
+- **Après une Pull Request (PR)** : Mettez à jour votre branche locale par rapport à `develop` en utilisant `git pull origin develop`. Résolvez les éventuels conflits avant de fusionner.
 
 ---
 
