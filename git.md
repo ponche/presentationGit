@@ -1,18 +1,18 @@
 ## Pourquoi Utiliser Plusieurs Branches dans Git ?
 
-**Travail Simultané** <!-- .element: class="fragment" -->
-**Isolation des Modifications** <!-- .element: class="fragment" -->
-**Expérimentation Sûre** <!-- .element: class="fragment" -->
-**Gestion des Conflits** <!-- .element: class="fragment" -->
-**Stabilité du Code** <!-- .element: class="fragment" -->
+- **Travail Simultané** <!-- .element: class="fragment" -->
+- **Isolation des Modifications** <!-- .element: class="fragment" -->
+- **Expérimentation Sûre** <!-- .element: class="fragment" -->
+- **Gestion des Conflits** <!-- .element: class="fragment" -->
+- **Stabilité du Code** <!-- .element: class="fragment" -->
 
-<div class="notes">
+Note:
 - **Travail Simultané** : Permet aux développeurs de travailler sur diverses fonctionnalités sans interférer avec le travail des autres.
 - **Isolation des Modifications** : Les modifications peuvent être isolées dans des branches spécifiques, facilitant ainsi la gestion et le test des changements.
 - **Expérimentation Sûre** : Permet d'expérimenter de nouvelles idées ou technologies sans affecter le code principal.
 - **Gestion des Conflits** : Réduit les conflits de fusion en isolant les modifications dans des branches distinctes.
 - **Stabilité du Code** : Permet de maintenir une branche stable (comme `main`) pour la production, tandis que les développements en cours se font sur d'autres branches.
-</div>
+
 
 ---
 
@@ -25,21 +25,21 @@
 - **bugfix/\<Correctif\>** <!-- .element: class="fragment" -->
 - **ci/\<pipelineDevelop\>** <!-- .element: class="fragment" -->
 
-<div class="notes">
+Note:
 - **main** : Branche de production, contenant le code stable et déployé.
 - **develop** : Branche de développement protégée, utilisée pour intégrer les nouvelles fonctionnalités avant leur déploiement.
 - **feature/\<MyFeature\>** : Branche dédiée au développement d'une nouvelle fonctionnalité.
 - **hotfix/\<correctifCritiqueEnProduction\>** : Branche pour corriger rapidement les bugs critiques en production.
 - **bugfix/\<Correctif\>** : Branche pour les corrections mineures.
 - **ci/\<pipelineDevelop\>** : Branche pour les travaux liés aux pipelines CI/CD.
-</div>
 
 ---
 
 ## Procédures et Conventions
 
 - **Nommer les Branches** <!-- .element: class="fragment" -->
-  Catégorie | Description | <!-- .element: class="fragment" -->
+
+  | Catégorie | Description | 
   |-----------|-------------|
   | hotfix | Résolution rapide des problèmes critiques. |
   | bugfix | Correction de bugs. |
@@ -49,7 +49,7 @@
   | ci | Ajout de Pipeline CI/CD. |
   | docs | Rédaction de documentation. |
 
-<div class="notes">
+Note:
 - **Nommer les Branches** : Suivre une convention de nommage claire pour les branches (ex. : `feature/<nom-fonctionnalité>`).
 - **hotfix** : Pour résoudre rapidement les problèmes critiques en production généralement avec une solution temporaire.
 - **bugfix** : Pour corriger un bug.
@@ -58,7 +58,7 @@
 - **draft** : Branches de brouillon, utilisées pour tester des choses.
 - **ci** : Pour ajouter des Pipeline CI/CD.
 - **docs** : Quand on rédige de la documentation, exemple : Docusaurus.
-</div>
+
 
 ---
 
@@ -68,9 +68,9 @@
   - `git pull origin develop` <!-- .element: class="fragment" -->
   - Résoudre les conflits <!-- .element: class="fragment" -->
 
-<div class="notes">
+Note:
 - **Après une Pull Request (PR)** : Mettez à jour votre branche locale par rapport à `develop` en utilisant `git pull origin develop`. Résolvez les éventuels conflits avant de fusionner.
-</div>
+
 
 ---
 
@@ -83,11 +83,11 @@
 3. **Envoyer les Modifications** <!-- .element: class="fragment" -->
    - `git push origin <nom-branche>` <!-- .element: class="fragment" -->
 
-<div class="notes">
+Note:
 - **Ajouter les Modifications** : Utilisez `git add <fichier>` pour ajouter les fichiers modifiés au staging.
 - **Créer un Commit** : Utilisez `git commit -m "Message de commit"` pour enregistrer les modifications avec un message clair.
 - **Envoyer les Modifications** : Utilisez `git push origin <nom-branche>` pour envoyer les modifications vers le dépôt distant.
-</div>
+
 
 ---
 
@@ -99,10 +99,12 @@
   - Rédiger une description détaillée <!-- .element: class="fragment" -->
   - Demander une revue de code <!-- .element: class="fragment" -->
 
-<div class="notes">
+
+
+
+Note:
 - **Création via GitHub** : Allez sur l'interface GitHub et cliquez sur "New Pull Request". Sélectionnez la branche source et la branche cible.
 - **Description et Revue de Code** : Rédigez une description détaillée des modifications apportées. Demandez une revue de code à vos collègues pour valider les changements.
-</div>
 
 ---
 
@@ -111,7 +113,7 @@
 - **Résumé des Points Clés** <!-- .element: class="fragment" -->
 - **Importance du Respect des Conventions** <!-- .element: class="fragment" -->
 
-<div class="notes">
+Note:
 - **Résumé des Points Clés** : Suivre des conventions claires pour la création et la gestion des branches. Maintenir une communication efficace via des messages de commit et des descriptions de PR.
 - **Importance du Respect des Conventions** : Respecter ces conventions est crucial pour un travail collaboratif efficace, réduisant les conflits et améliorant la qualité du code.
-</div>
+
